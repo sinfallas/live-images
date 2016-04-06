@@ -1,0 +1,375 @@
+live-images (5.0~a5-1) unstable; urgency=low
+
+  [ Carlos Zuferri ]
+  * Adding initial Spanish translation of manpage.
+  * Updating dates in manpages files.
+
+  [ Daniel Baumann ]
+  * Synchronising gitignore file for standard config with all the other
+    gitignore files.
+  * Marking pciutils to be included only when non-free is enabled.
+  * Wrap and sort debian control file.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 23 Aug 2015 11:02:33 +0200
+
+live-images (5.0~a4-1) unstable; urgency=low
+
+  * Dropping examples, not used anymore.
+  * Dropping sudo from installer.list, debian-installer-launcher needs to
+    be fixed and have a direct depends on sudo.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Fri, 05 Jun 2015 18:25:55 +0200
+
+live-images (5.0~a3-1) unstable; urgency=low
+
+  * Updating jessie bootloader splash (Closes: #775527).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Tue, 28 Apr 2015 06:40:29 +0200
+
+live-images (5.0~a2-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Dropping explicit kernel package selection.
+  * Updating bootloader splash with Lines theme from Juliette Taka Belin
+    <juliettetaka.belin@gmail.com> for jessie (Closes: #775527).
+
+  [ Ben Armstrong ]
+  * Fixing incorrect print task package name.
+
+  [ Daniel Baumann ]
+  * Updating gitignore file.
+  * Updating hook to set plymouth default theme.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 26 Apr 2015 20:34:20 +0200
+
+live-images (5.0~a1-1) experimental; urgency=low
+
+  * Dropping wheezy from config trees.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 25 Jan 2015 09:14:55 +0100
+
+live-images (4.0.3-1) unstable; urgency=low
+
+  * Including gstreamer-vaapi on jessie and newer desktop configs.
+  * Harmonizing cinnamon-desktop package list.
+  * Harmonizing mate-desktop package list.
+  * Removing nvclock from dkms.list.chroot_install package lists, nvclock
+    got removed from jessie.
+  * Updating d-i bootparameter separator for jessie.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 25 Jan 2015 09:04:26 +0100
+
+live-images (4.0.2-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Renaming live.list.chroot to live-systems.list.chroot to ensure
+    compatibility with both lb3 and lb4, for both wheezy and jessie, and
+    without hardcoding initsystem dependent packages in the package list
+    (but rather let lb populate it).
+  * Using new task-mate-desktop in mate-desktop image instead of mate-
+    desktop-environment.
+  * Adding initial cinnamon-desktop config.
+  * Dropping discontinued live-debconfig from recommends.
+  * Replacing live-config leftover in bug-presubj with correct package
+    name.
+
+  [ victory ]
+  * Add Japanese translation.
+
+  [ Ben Armstrong ]
+  * Fixing reversed logic for plymouth-drm: only in wheezy.
+
+  [ Daniel Baumann ]
+  * Updating to standards version 3.9.6.
+  * Dropping rescue flavour, we only want to build images based on tasksel
+    selections and nobody was interested enough to get the rescue flavour
+    in there at this point.
+  * Dropping incomplete German manpage translations.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 25 Oct 2014 14:56:34 +0200
+
+live-images (4.0.1-1) unstable; urgency=low
+
+  * Adding updated bootloader configs for both wheezy and newer with
+    syslinux 4 and syslinux 6 respectively.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Fri, 12 Sep 2014 14:12:02 +0200
+
+live-images (4.0.0-1) unstable; urgency=low
+
+  * Correcting date in German manpage translation.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Wed, 27 Aug 2014 20:16:56 +0200
+
+live-images (4.0~alpha26-1) unstable; urgency=low
+
+  * Dropping temporary distribution overrides for lxc-server.
+  * Dropping explicit python3 from lxc-server list.
+  * Adding haveged to lxc-server list.
+  * Temporarily skipping testing-removed molly-guard from jessie.
+  * Bumping version for next wheezy point release.
+  * Updating for jessie alpha1.
+  * Setting empty suffix for consistency reason in wheezy script.
+  * Dropping temporarily added jessie-only markings for molly-guard, it's
+    back in testing again.
+  * Dropping lxc-server image again, it's not an official task in tasksel.
+  * Updating names of open-vm-tools dkms package for jessie.
+  * Marking plymouth-drm as wheezy-only.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 23 Aug 2014 08:22:25 +0200
+
+live-images (4.0~alpha25-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Marking criu as amd64 armhf only.
+
+  [ Carlos Zuferri ]
+  * Correcting package name in po4a options.
+  * Removing obsolete flag '--no-backups' from po4a options.
+  * Adding '--package-version' to po4a options.
+  * Updating translation files.
+  * Adding .po integrity check target to manpages/Makefile.
+
+  [ Daniel Baumann ]
+  * Adding mate-desktop image.
+  * Adding lxc-server image to example scripts.
+  * Adding lxc-server image in manpage.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Thu, 12 Jun 2014 08:09:25 +0200
+
+live-images (4.0~alpha24-1) unstable; urgency=low
+
+  * Updating for wheezy 7.5.
+  * Updating for jessie alpha1.
+  * Adding example scripts for non-free.
+  * Marking console-tools in localization.list.chroot as wheezy-only.
+  * Adding lxc-server image configuration.
+  * Bumping depends on live-build to 4.x.
+  * Using open-vm-tools-desktop package on jessie and newer.
+  * Making package lists derivatives friendlier.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Wed, 07 May 2014 07:04:35 +0200
+
+live-images (4.0~alpha23-1) unstable; urgency=low
+
+  * Updating copyright notices for 2014.
+  * Updating examples for 7.4.
+  * Building with dh --parallel.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 31 Mar 2014 21:59:12 +0200
+
+live-images (4.0~alpha22-1) unstable; urgency=low
+
+  * Including zfs-fuse in rescue list (Closes: #731483).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Thu, 05 Dec 2013 22:20:31 +0100
+
+live-images (4.0~alpha21-1) unstable; urgency=low
+
+  * Updating package descriptions.
+  * Rewrapping control file.
+  * Updating to standards version 3.9.5.
+  * Renaming hook files for live-build 4.0~alpha29.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 04 Nov 2013 08:02:47 +0100
+
+live-images (4.0~alpha20-1) unstable; urgency=low
+
+  * Updating example script for later 7.2 images.
+  * Adding dcfldd to rescue package list.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Tue, 01 Oct 2013 21:12:28 +0200
+
+live-images (4.0~a19-1) unstable; urgency=low
+
+  * Correcting exfat-fuse package name in rescue package list.
+  * Updating tag for 7.0.1 images in example build script.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Thu, 22 Aug 2013 10:56:21 +0200
+
+live-images (4.0~a18-1) unstable; urgency=low
+
+  [ Richard Nelson ]
+  * Revert "Return the error code from auto/build script."
+
+  [ Daniel Baumann ]
+  * Adding exfat-utils and fuse-exfat to rescue package list.
+  * Adding clonezilla in rescue package list.
+  * Removing firmware packages from rescue list, they get pulled in
+    automatically through live-build.
+  * Adding reaver to rescue package list.
+  * Adding note about lb build in images readmefile.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 17 Aug 2013 08:20:20 +0200
+
+live-images (4.0~a17-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Checking out specified tag in wheezy example script since live-images
+    is not in wheezy itself.
+
+  [ Richard Nelson ]
+  * Return the error code from auto/build script.
+
+  [ Daniel Baumann ]
+  * Including memtest86+ in syslinux menu (Closes: #709887).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 27 May 2013 17:27:22 +0200
+
+live-images (4.0~a16-1) unstable; urgency=low
+
+  * Splitting up dkms package lists in an install and a live-only part.
+  * Correcting variable typo in example build script.
+  * Updating example build script for wheezy.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 05 May 2013 08:14:15 +0200
+
+live-images (4.0~a15-1) unstable; urgency=low
+
+  * Including i965-va-driver for wheezy now too.
+  * Dropping conflicts/replaces to live-image-all again.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Thu, 25 Apr 2013 12:57:33 +0200
+
+live-images (4.0~a14-1) unstable; urgency=low
+
+  * Correcting typo in package name for live-image-all conflicts/replaces
+    (Closes: #704808).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Tue, 09 Apr 2013 09:48:21 +0200
+
+live-images (4.0~a13-1) unstable; urgency=low
+
+  * Adding temporary conflicts/replaces to live-images-all (Closes:
+    #704808).
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 06 Apr 2013 09:02:39 +0200
+
+live-images (4.0~a12-1) unstable; urgency=low
+
+  * Renaming live-image-all metapackage to live-images for consistency
+    with live-manual.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 01 Apr 2013 11:50:09 +0200
+
+live-images (4.0~a11-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Debranding package for derivatives.
+  * Adding script used to build pre-built wheezy image sets.
+  * Building non-free set with KMS disabled for radeon and nouveau for the
+    time being to workaround boot errors caused by missing integration
+    with the binary-only drivers (Closes: #703179).
+  * Adding examples to automatic syntax checking in toplevel makefile.
+  * Intending lb config options for easier diffing.
+  * Handling source enabled/disabled trigger from within auto/config
+    rather than from the build script.
+
+  [ Ben Armstrong ]
+  * Adding sudo to installer list to ensure post-install cleanup doesn't
+    remove it.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 01 Apr 2013 08:40:02 +0200
+
+live-images (4.0~a10-1) unstable; urgency=low
+
+  * Removing all references to my old email address.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 10 Mar 2013 22:35:01 +0100
+
+live-images (4.0~a9-1) unstable; urgency=low
+
+  * Correcting spelling typos, thanks to Adam D. Barratt <adam@adam-
+    barratt.org.uk>.
+  * Updating live-manual meta-package name in package lists.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 02 Mar 2013 07:22:01 +0100
+
+live-images (4.0~a8-1) unstable; urgency=low
+
+  * Expliclity setting linux flavours to not rely on internal live-build
+    defaults.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Fri, 01 Mar 2013 10:26:44 +0100
+
+live-images (4.0~a7-1) unstable; urgency=low
+
+  * Using 'A' shortcut key for 'Advanced options' in syslinux menu.
+  * Shuffeling package lists arround to include task-laptop and task-ssh-
+    server on all images by default.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 17 Feb 2013 19:36:01 +0100
+
+live-images (4.0~a6-1) unstable; urgency=low
+
+  * Adjusting depends against live-build again, it needs live-build
+    3.0.0-1 or newer now.
+  * Removing superfluous menu default directive in installer syslinux
+    menues.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Thu, 14 Feb 2013 19:24:24 +0100
+
+live-images (4.0~a5-1) unstable; urgency=low
+
+  * Dropping dpkg compression level.
+  * Adding hook to disable isc-dhcp-server in rescue image.
+  * Lowering strict depends on live-build 3.0 to be fulfillable with live-
+    build pre-releases.
+  * Adding initial set of bootloader themes.
+  * Don't dereference symlinks for image configs in toplevel makefile.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sat, 09 Feb 2013 00:29:33 +0100
+
+live-images (4.0~a4-1) unstable; urgency=low
+
+  * Marking ettercap-text-only as sid only.
+  * Unmarking ntop as sid only.
+  * Including i965-va-driver in sid on the desktop images.
+  * Removing config/control for live-build 4.x in auto/clean scripts too.
+  * Adding config/control for live-build 4.x in gitignore files too.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Sun, 20 Jan 2013 15:08:51 +0100
+
+live-images (4.0~a3-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Correcting fglrx dkms package name.
+  * Updating fuse package name in rescue list.
+  * Dropping pre-wheezy conditionals in rescue list.
+
+  [ Richard Nelson ]
+  * Drop afio and tob in rescue package-lists.
+  * Drop honeyd in rescue package-lists.
+
+  [ Daniel Baumann ]
+  * Including broadcom-sta-dkms in dkms package lists.
+  * Including nvidia vdpau related packages in dkms package lists.
+  * Harmonizing package descriptions.
+  * Updating year in all copyright notices.
+  * Updating manpage year handling for 2013.
+  * Completing German manpage translation.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Fri, 04 Jan 2013 10:59:10 +0100
+
+live-images (4.0~a2-1) unstable; urgency=low
+
+  * Adding dkms package list with open-vm, virtualbox-guest, fglrx, and
+    nvidia modules.
+  * Including plymouth-x11 package.
+  * Adding virtualbox-guest-utils and virtualbox-guest-x11 explicitly to
+    dkms package list.
+  * Sorting lb_config arguments.
+  * Explicitly enabling debian-installer.
+  * Always including pciutils in desktop images, not just when non-fre is
+    enabled as live-configs xserver-xorg scripts support virtualbox too.
+  * Including task-print-server and task-ssh-server in package lists to
+    mimic default taskselb behaviour within debian-installer.
+  * Trimming filename of desktop package lists for easier diffing.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Mon, 17 Dec 2012 20:38:14 +0100
+
+live-images (4.0~a1-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Daniel Baumann <mail@daniel-baumann.ch>  Thu, 13 Dec 2012 17:19:31 +0100

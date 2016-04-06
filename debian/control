@@ -1,0 +1,165 @@
+Source: live-images
+Section: misc
+Priority: optional
+Maintainer: Live Systems Maintainers <debian-live@lists.debian.org>
+Uploaders:
+ Daniel Baumann <mail@daniel-baumann.ch>,
+Build-Depends:
+ debhelper (>= 9),
+Standards-Version: 3.9.6
+Homepage: http://live-systems.org/devel/live-images/
+Vcs-Browser: http://live-systems.org/gitweb/?p=live-images.git
+Vcs-Git: git://live-systems.org/git/live-images.git
+
+Package: live-image-cinnamon-desktop
+Architecture: all
+Depends:
+ live-build (>= 4.0~),
+ ${misc:Depends},
+Recommends:
+ live-boot-doc,
+ live-config-doc,
+ live-manual-html | live-manual,
+Description: Live System Image Components (Cinnamon desktop)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-images contains the configuration directories for live-build to build
+ live system images.
+ .
+ This package contains the configuration directory for the Cinnamon desktop
+ image.
+
+Package: live-image-gnome-desktop
+Architecture: all
+Depends:
+ live-build (>= 4.0~),
+ ${misc:Depends},
+Recommends:
+ live-boot-doc,
+ live-config-doc,
+ live-manual-html | live-manual,
+Description: Live System Image Components (GNOME desktop)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-images contains the configuration directories for live-build to build
+ live system images.
+ .
+ This package contains the configuration directory for the GNOME desktop image.
+
+Package: live-image-kde-desktop
+Architecture: all
+Depends:
+ live-build (>= 4.0~),
+ ${misc:Depends},
+Recommends:
+ live-boot-doc,
+ live-config-doc,
+ live-manual-html | live-manual,
+Description: Live System Image Components (KDE desktop)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-images contains the configuration directories for live-build to build
+ live system images.
+ .
+ This package contains the configuration directory for the KDE desktop image.
+
+Package: live-image-lxde-desktop
+Architecture: all
+Depends:
+ live-build (>= 4.0~),
+ ${misc:Depends},
+Recommends:
+ live-boot-doc,
+ live-config-doc,
+ live-manual-html | live-manual,
+Description: Live System Image Components (LXDE desktop)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-images contains the configuration directories for live-build to build
+ live system images.
+ .
+ This package contains the configuration directory for the LXDE desktop image.
+
+Package: live-image-mate-desktop
+Architecture: all
+Depends:
+ live-build (>= 4.0~),
+ ${misc:Depends},
+Recommends:
+ live-boot-doc,
+ live-config-doc,
+ live-manual-html | live-manual,
+Description: Live System Image Components (MATE desktop)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-images contains the configuration directories for live-build to build
+ live system images.
+ .
+ This package contains the configuration directory for the MATE desktop image.
+
+Package: live-image-standard
+Architecture: all
+Depends:
+ live-build (>= 4.0~),
+ ${misc:Depends},
+Recommends:
+ live-boot-doc,
+ live-config-doc,
+ live-manual-html | live-manual,
+Description: Live System Image Components (standard)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-images contains the configuration directories for live-build to build
+ live system images.
+ .
+ This package contains the configuration directory for the standard image.
+
+Package: live-image-xfce-desktop
+Architecture: all
+Depends:
+ live-build (>= 4.0~),
+ ${misc:Depends},
+Recommends:
+ live-boot-doc,
+ live-config-doc,
+ live-manual-html | live-manual,
+Description: Live System Image Components (Xfce desktop)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-images contains the configuration directories for live-build to build
+ live system images.
+ .
+ This package contains the configuration directory for the Xfce desktop image.
+
+Package: live-images
+Architecture: all
+Section: metapackages
+Depends:
+ live-image-cinnamon-desktop,
+ live-image-gnome-desktop,
+ live-image-kde-desktop,
+ live-image-lxde-desktop,
+ live-image-mate-desktop,
+ live-image-standard,
+ live-image-xfce-desktop,
+ ${misc:Depends},
+Recommends:
+ live-boot-doc,
+ live-config-doc,
+ live-manual-html | live-manual,
+Description: Live System Image Components (metapackage)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-images contains the configuration directories for live-build to build
+ live system images.
+ .
+ This package is a metapackage depending on all available configuration
+ directories.
